@@ -1,0 +1,8 @@
+# System Files
+.DS_Store
+node_modules
+frontend/node_modules
+KaDo.csv
+*.icloud
+*.pyc
+backend/__pycache__/app.cpython-39.pyc

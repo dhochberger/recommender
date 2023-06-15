@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  frontend:
+    container_name: frontend-prod
+    build: 
+      context: ./frontend
+      target: production
+      dockerfile: Dockerfile.prod
+    volumes:
+      - './frontend:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000:3000'

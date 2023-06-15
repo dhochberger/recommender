@@ -1,0 +1,14 @@
+FROM python:3.9.10 AS development
+
+WORKDIR /code
+
+ENV FLASK_APP=src/app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+RUN pip install flask flask-cors pandas
+
+EXPOSE 5000
+
+COPY . .
+
+CMD [ "python", "src/app.py" ]
